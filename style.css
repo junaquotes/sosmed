@@ -1,0 +1,386 @@
+/* Css Reset */
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* Akhir Css Reset */
+
+/* Font */
+@font-face {
+  font-family: "JosefinSans";
+  src: url(font/JosefinSans-Regular.ttf);
+}
+/* Akhir font */
+
+/* Main Style */
+
+* {
+  font-family: "JosefinSans";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #2d2d6d;
+}
+.header {
+  text-align: center;
+  color: #fff;
+  padding: 25px 50px;
+  z-index: 1;
+  position: relative;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  /* background-image: linear-gradient(20deg, #5af04c, #4cc9f0); */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.container .card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.container .card .gambar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  transform: translateY(0);
+  transition: 0.5s ease-out;
+}
+.container .card .gambar h2 {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #979595;
+  margin-top: 210px;
+  cursor: default;
+  font-size: 1.2em;
+  color: white;
+  z-index: 1;
+  transform: translateY(0);
+  transition: 0.5s ease-out;
+}
+.container .card:hover h2 {
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.container .card .gambar img {
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 10px;
+  text-align: center;
+  transform: translateY(0);
+  transition: 0.5s ease-out;
+}
+.container .card .konten {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(320px);
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+.container .card:hover .konten {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.container .card:hover img {
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.container .card .konten h3 {
+  cursor: default;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+  color: white;
+  z-index: 1;
+}
+.container .card .konten a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+.container .card .konten a:hover {
+  background-color: lightslategray;
+  color: white;
+  transform: scale(1.1);
+}
+.footer {
+  box-sizing: border-box;
+  margin-top: 100px;
+  position: relative;
+  bottom: 0;
+  padding: 20px 50px;
+  width: 100%;
+  height: 150px;
+  background-color: #3586ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .medsos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.footer .medsos li a {
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.footer .medsos li a:hover {
+  transform: translateY(-10px);
+}
+.footer p {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+.footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(img/wave.png);
+  background-size: 1000px 100px;
+}
+.footer .wave#waves1 {
+  z-index: 100;
+  opacity: 1;
+  bottom: 0;
+  animation: ombak 4s linear infinite;
+}
+.footer .wave#waves2 {
+  z-index: 99;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: ombak-2 4s linear infinite;
+}
+.footer .wave#waves3 {
+  z-index: 100;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: ombak 3s linear infinite;
+}
+.footer .wave#waves4 {
+  z-index: 99;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: ombak 3s linear infinite;
+}
+.fa-heart {
+  color: rgb(194, 5, 78);
+}
+.fa-fire {
+  color: orange;
+}
+
+/* Animasi */
+@keyframes ombak {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+@keyframes ombak-2 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes muter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Akhir Animasi */
+
+/* Shape Style */
+.pembatas {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.shape1 {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: -210px;
+  left: -270px;
+  border-radius: 50%;
+  background: linear-gradient(#4361ee, #4cc9f0);
+  animation: muter 4s linear infinite;
+}
+.shape2 {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 420px;
+  right: -240px;
+  border-radius: 50%;
+  background: linear-gradient(#4361ee, #4cc9f0);
+  animation: muter 4s linear infinite;
+}
+.shape3 {
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  top: 900px;
+  left: -195px;
+  border-radius: 50%;
+  background: linear-gradient(#4361ee, #4cc9f0);
+  animation: muter 4s linear infinite;
+}
+
+/* Akhir Shape Style */
+
+/* Media Breakpoints */
+
+@media only screen and (max-width: 800px) {
+  .shape1 {
+    width: 550px;
+    height: 550px;
+    left: -200px;
+  }
+  .shape2 {
+    width: 450px;
+    height: 450px;
+    right: -200px;
+  }
+  .shape3 {
+    width: 450px;
+    height: 450px;
+  }
+  .shape4 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 1400px;
+    right: -250px;
+    border-radius: 50%;
+    background: linear-gradient(#4361ee, #4cc9f0);
+    animation: muter 4s linear infinite;
+  }
+  .shape5 {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 1800px;
+    left: -200px;
+    border-radius: 50%;
+    background: linear-gradient(#4361ee, #4cc9f0);
+    animation: muter 4s linear infinite;
+  }
+  .shape6 {
+    opacity: 0;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 2300px;
+    right: -250px;
+    border-radius: 50%;
+    background: linear-gradient(#4361ee, #4cc9f0);
+    animation: muter 6s linear infinite;
+  }
+  .shape7 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 3000px;
+    left: -180px;
+    border-radius: 50%;
+    background: linear-gradient(#4361ee, #4cc9f0);
+    animation: muter 4s linear infinite;
+  }
+  .shape8 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 3600px;
+    right: -200px;
+    border-radius: 50%;
+    background: linear-gradient(#4361ee, #4cc9f0);
+    animation: muter 4s linear infinite;
+    -webkit-animation: muter 4s linear infinite;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .shape6 {
+    opacity: 1;
+  }
+}
+
+/* Akhir Media Breakpoints */

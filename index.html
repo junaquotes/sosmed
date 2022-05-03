@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juna | Sosial Media</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/3075c43df2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="pembatas">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="shape4"></div>
+      <div class="shape5"></div>
+      <div class="shape6"></div>
+      <div class="shape7"></div>
+      <div class="shape8"></div>
+      <div class="header"><h1>Juna | Sosial Media</h1></div>
+      <div class="container">
+        <div class="card">
+          <div class="gambar">
+            <h2>Instagram</h2>
+            <img src="img/download.jpg" />
+          </div>
+          <div class="konten">
+            <ul>
+              <li><a href="https://www.instagram.com/jun_shye/" target="_blank">@Jun_Shye</a></li>
+              <li><a href="https://www.instagram.com/jun_shye/" target="_blank">@Arjuna5035</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="gambar">
+            <h2>Fecebook</h2>
+            <img src="img/fecebook.png" />
+          </div>
+          <div class="konten">
+            <ul>
+              <li><a href="https://www.facebook.com/arjuna.sanwa" target="_blank">Juna</a></li>
+            </ul>
+          </div>
+        </div>
+         <div class="card">
+          <div class="gambar">
+            <h2>Tiktok</h2>
+            <img src="img/tiktok.png" />
+          </div>
+          <div class="konten">
+            <ul>
+              <li><a href="https://www.tiktok.com/@aam_841" target="_blank">Aam_841</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="gambar">
+            <h2>Portofolio</h2>
+            <img src="img/portofolio.png" />
+          </div>
+          <div class="konten">
+            <ul>
+              <li><a href="https://junaquotes.github.io/jun.github.io/" target="_blank">Arjuna</a></li>
+            </ul>
+          </div>
+        </div>
+    <div class="footer">
+      <div class="waves">
+        <div class="wave" id="waves1"></div>
+        <div class="wave" id="waves2"></div>
+        <div class="wave" id="waves3"></div>
+        <div class="wave" id="waves4"></div>
+      </div>
+      <p>&copy;2022 Arjuna | Made with <i class="fas fa-heart"></i> and <i class="fas fa-fire"></i></p>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      function myFunction(x) {
+        if (x.matches) {
+          VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: 1,
+          });
+        } else {
+        }
+      }
+      var x = window.matchMedia("(min-width: 1050px)");
+      myFunction(x);
+      x.addListener(myFunction);
+    </script>
+  </body>
+</html>
